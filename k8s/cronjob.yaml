@@ -13,3 +13,6 @@ spec:
             image: l3rl4n/nat-test:demo
             imagePullPolicy: Always
           restartPolicy: Never
+          envFrom:
+          - configMapRef:
+            name: nat-test-cm

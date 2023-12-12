@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nat-test-cm
+stringData:
+  TEST_URL: https://ip-whitelist.calendly.com
+  NUM_REQUESTS: 100
