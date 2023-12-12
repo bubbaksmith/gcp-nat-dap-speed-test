@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nat-test
+spec:
+  schedule: "0 0 5 31 2 ?"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: nat-test
+            image: l3rl4n/nat-test:demo
+            imagePullPolicy: Always

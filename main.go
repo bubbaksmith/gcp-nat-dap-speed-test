@@ -30,7 +30,7 @@ func makeRequest(url string, id int, wg *sync.WaitGroup, results chan RequestRes
 
 func main() {
 	url := "https://ip-whitelist.calendly.com"
-	numRequests := 2
+	numRequests := 1024
 
 	var wg sync.WaitGroup
 	results := make(chan RequestResult, numRequests)
