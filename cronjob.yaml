@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: nat-test
 spec:
-  schedule: "0 0 5 31 2 ?"
+  schedule: "0 5 31 2 ?"
   jobTemplate:
     spec:
       template:
@@ -12,3 +12,4 @@ spec:
           - name: nat-test
             image: l3rl4n/nat-test:demo
             imagePullPolicy: Always
+          restartPolicy: Never
