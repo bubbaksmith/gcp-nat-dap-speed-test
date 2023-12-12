@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
+	"strconv"
 	"sync"
 	"time"
 )
@@ -30,7 +32,10 @@ func makeRequest(url string, id int, wg *sync.WaitGroup, results chan RequestRes
 
 func main() {
 	url := os.Getenv("TEST_URL")
-	numRequests := os.Getenv("NUM_REQUESTS")
+	numRequests, err := strconv.Atoi(os.Getenv("NUM_REQUESTS"))
+	if err != nil {
+		panic(err)
+	}
 
 	var wg sync.WaitGroup
 	results := make(chan RequestResult, numRequests)

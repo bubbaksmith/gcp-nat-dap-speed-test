@@ -12,7 +12,8 @@ spec:
           - name: nat-test
             image: l3rl4n/nat-test:demo
             imagePullPolicy: Always
+            envFrom:
+            - configMapRef:
+                name: nat-test-cm
           restartPolicy: Never
-          envFrom:
-          - configMapRef:
-            name: nat-test-cm
+      backoffLimit: 0 # Dont retry multiple times before being marked failure
