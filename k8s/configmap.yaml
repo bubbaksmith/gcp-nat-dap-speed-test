@@ -4,4 +4,4 @@ metadata:
   name: nat-test-cm
 data:
   TEST_URL: https://ip-whitelist.calendly.com
-  NUM_REQUESTS: "100"
+  NUM_REQUESTS: "1025"

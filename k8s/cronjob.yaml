@@ -10,6 +10,9 @@ spec:
         spec:
           containers:
           - name: nat-test
+            metadata:
+              labels:
+                app: nat-test
             image: l3rl4n/nat-test:demo
             imagePullPolicy: Always
             envFrom:
