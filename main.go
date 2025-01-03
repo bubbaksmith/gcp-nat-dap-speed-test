@@ -31,7 +31,7 @@ func makeRequest(url string, id int, wg *sync.WaitGroup, results chan RequestRes
 }
 
 func main() {
-	url := os.Getenv("TEST_URL")
+	url := os.Getenv("TARGET_URL")
 	numRequests, err := strconv.Atoi(os.Getenv("NUM_REQUESTS"))
 	if err != nil {
 		panic(err)

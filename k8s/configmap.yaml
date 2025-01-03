@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: nat-test-cm
 data:
-  TEST_URL: https://ip-whitelist.calendly.com
+  TARGET_URL: UPDATE_ME
   NUM_REQUESTS: "1025"
